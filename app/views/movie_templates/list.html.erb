@@ -10,7 +10,6 @@
 <th></th>
 </tr>
 
-
 <% Movie.all.each do |a_movie| %>
 
 <tr>
@@ -21,7 +20,7 @@
 <td><%= a_movie.year %></td>
 <td><%= a_movie.director_id %></td>
 <td>
-<a href="/directors/<%= a_movie.id %> ">Show details</td>
+<a href="/movies/<%= a_movie.id %> ">Show details</td>
 </tr>
 <div><%= a_movie.title %></div>
 <% end %>
