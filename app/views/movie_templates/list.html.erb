@@ -14,13 +14,13 @@
 
 <tr>
 <td><%= a_movie.id %></td>
-<td>
-<img src="<%= a_movie.image %><td" width="50">
+<td><img src="<%= a_movie.image %>" width="50"></td>
 <td><%= a_movie.title %></td>
 <td><%= a_movie.year %></td>
 <td><%= a_movie.director_id %></td>
 <td>
-<a href="/movies/<%= a_movie.id %> ">Show details</td>
+<a href="/movies/<%= a_movie.id %> ">Show details</a>
+</td>
 </tr>
 <% end %>
 </table>
