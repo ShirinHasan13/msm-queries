@@ -12,8 +12,11 @@ class DirectorsController < ApplicationController
   render({ :template => "director_templates/details"})
   end
 
-  def junior
-    render({ :template => "director_templates/youngest"})
+  def youngest
+    matching_directors = Director.order({ :dob => :desc }).limit(1)
+    @youngest_director = matching_directors.at(0)
+    
+    render({ :template => "directors_templates/youngest" })
 
 end
 end
