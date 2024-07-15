@@ -1,2 +1,10 @@
 <h1>Youngest director</h1>
-<p>The youngest director in our dataset right now is <%= @youngest_director.name %>, born on <%= @youngest_director.dob %>.</p>
+<p>
+  The youngest director in our dataset right now is 
+  <%= link_to @youngest_director.name, "/directors/#{@youngest_director.id}" %>, 
+  born on <%= @youngest_director.dob %>.
+   
+</p>
+<p>
+(<%= link_to "http://strftime.net/", "http://strftime.net/" %> is handy for putting together the formatting strings for the .strftime method.)
+</p>
